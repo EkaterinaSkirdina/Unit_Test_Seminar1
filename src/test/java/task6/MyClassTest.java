@@ -17,5 +17,21 @@ public class MyClassTest {
         List<Integer> resultTest = MyClass.sumLists(list1, list2);
         assertEquals(result, resultTest, "Сумма списков не верна");
     }
+
+    @Test
+    public  void isFinndMaxCorrect() {
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(1,2,3));
+        int result = 3;
+        int resultTest = MyClass.findMax(list1);
+        assertEquals(result, resultTest, "Результат не верен");
+    }
+
+    @Test
+    public void isFilterStringsCorrect() {
+        List<String> list1 = new ArrayList<>(Arrays.asList("Я", "говорю", "привет"));
+        List<String> result = new ArrayList<>(Arrays.asList("говорю", "привет"));
+        List<String> resultTest = MyClass.filterStrings(list1, 5);
+        assertEquals(result, resultTest, "Фильтрация не корректна");
+    }
 }
 
